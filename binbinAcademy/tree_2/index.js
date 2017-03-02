@@ -44,6 +44,7 @@ function search() {
 	var divs = document.getElementsByTagName("div");
 	for (var i = 0; i < divs.length; i++) {
 		divs[i].className = divs[i].className.replace("found", "");
+		divs[i].className = divs[i].className.replace("blue", "");
 	}
 
 	var nodeData = document.getElementsByName("node_data")[0].value;

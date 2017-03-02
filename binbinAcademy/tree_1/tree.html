@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tree_1</title>
+    <script type="text/javascript" src="tree.js"></script>
+    <script type="text/javascript" src="index.js"></script>
+
+    <style type="text/css">
+    		* {
+    			padding: 2%;
+    		}
+		#container {
+			width: 80%;
+			margin: auto auto;
+		}
+		.child {
+			width: 44%;
+			
+		}
+		.left {
+			float: left;
+		}
+		.right {
+			float: right;
+		}
+		.child, .root {
+			overflow: hidden;
+			min-width: 50px;
+			min-height: 50px;
+			border: 1px solid blue;
+			background-color: white;
+		}
+		.button_group {
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+    <div id="container">
+    </div>
+    <div class="button_group">
+    		<button id="dfs_in">DFS_In</button>
+    		<button id="dfs_post">DFS_Post</button>
+    		<button id="dfs_pre">DFS_Pre</button>
+    </div>
+</body>
+</html>

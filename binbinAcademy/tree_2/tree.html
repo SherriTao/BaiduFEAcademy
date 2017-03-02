@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tree_2</title>
+    <script type="text/javascript" src="tree.js"></script>
+    <script type="text/javascript" src="index.js"></script>
+
+    <style type="text/css">
+    		* {
+    			padding: 2%;
+    		}
+		#container {
+			width: 80%;
+			margin: auto auto;
+			display: flex;
+		}
+	
+		.child, .root {
+			display: flex;
+			flex: 1;
+			min-width: 50px;
+			min-height: 50px;
+			border: 1px solid blue;
+			background-color: white;
+		}
+		.button_group {
+			text-align: center;
+		}
+		.found {
+			border: 3px solid yellow;
+		}
+	</style>
+</head>
+<body>
+    <div id="container">
+    </div>
+    <div class="button_group">
+    		<input type="button" name="dfs_pre" value="DFS_Preorder"></input>
+    		<input type="text" name="node_data" placeholder="node1"/>
+    		<input type="button" name="search" value="Search"></input>
+    </div>
+</body>
+</html>

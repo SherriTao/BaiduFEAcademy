@@ -33,6 +33,10 @@ function addEvent(obj, type, handle){
 }
 
 function traversalPre() {
+	var divs = document.getElementsByTagName("div");
+	for (var i = 0; i < divs.length; i++) {
+		divs[i].className = divs[i].className.replace("blue", "");
+	}
 	tree.contains(tree.showNode, tree.traverseDFPre);
 }
 

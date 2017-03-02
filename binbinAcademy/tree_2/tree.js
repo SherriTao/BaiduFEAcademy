@@ -21,11 +21,11 @@ Tree.prototype.contains = function (callback, traversal) {
 Tree.prototype.showNode = function (node) {
 	if (this.preShowNode) {
 		var preNodeH = document.getElementById(this.preShowNode.data);
-		preNodeH.style.backgroundColor = "white";
+		preNodeH.className = preNodeH.className.replace("blue", "");
 	}
 
 	var nodeH = document.getElementById(node.data);
-	nodeH.style.backgroundColor = "blue";
+	nodeH.className += " blue";
 	this.preShowNode = node;
 };
 

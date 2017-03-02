@@ -141,8 +141,10 @@ Tree.prototype.deleteNode = function (data) {
 			var current = node,
 				parent = node.parent;
 
-			parent.children.splice(parent.children.indexOf(node), 1);
-			delete current;
+			if (parent) {
+				parent.children.splice(parent.children.indexOf(node), 1);
+				delete current;
+			}
 		}
 	};
 	this.contains(callback, this.traverseDFPre);

@@ -7,7 +7,6 @@ function Node(data) {
 
 function Tree(data) {
 	this.root = new Node(data);
-	this.preShowNode = null;
 	this.compelete = false;
 	this.count = 0;
 }
@@ -19,14 +18,13 @@ Tree.prototype.contains = function (callback, traversal) {
 };
 
 Tree.prototype.showNode = function (node) {
-	if (this.preShowNode) {
-		var preNodeH = document.getElementById(this.preShowNode.data);
-		preNodeH.className = preNodeH.className.replace("blue", "");
+	var targetNodes = document.getElementsByClassName("blue");
+	for (var i = 0; i < targetNodes.length; i++) {
+		targetNodes[i].className = targetNodes[i].className.replace("blue", "");
 	}
 
 	var nodeH = document.getElementById(node.data);
 	nodeH.className += " blue";
-	this.preShowNode = node;
 };
 
 Tree.prototype.find = function (searchNode) {

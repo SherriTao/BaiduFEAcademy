@@ -1,0 +1,57 @@
+/* custom checkbox/radio css */
+.co-box {
+	margin: 10px 0;
+}
+.co-box input {
+	display: none;
+}
+/* Default css */
+.co-checkbox label, .co-radiobox label {
+	display: inline-block;
+	position: relative;
+	width: 16px;
+	height: 16px;
+	border: 1px solid lightgrey;
+}
+.co-checkbox label {
+	border-radius: 5px;
+}
+.co-radiobox label {
+	border-radius: 50%;
+}
+/* Default css end */
+
+/* Selected css */
+.co-checkbox input:checked+label, .co-radiobox input:checked+label {
+	border-color: red;
+}
+.co-checkbox input:checked+label::after, .co-radiobox input:checked+label::after {
+	display: inline-block;
+	position: absolute;
+	top: 50%;
+	left: 50%;	
+	content: ' ';
+}
+.co-radiobox input:checked+label::after {
+	margin-left: -4px;
+	margin-top: -4px;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background-color: red;
+}
+.co-checkbox input:checked+label::after {
+	margin-left: -5px;
+	margin-top: -4px;
+	width: 8px;
+	height: 4px;
+	border: 2px solid red;
+    border-top: none;
+    border-right: none;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+/* Selected css end */

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Custom Checkbox/radio CSS</title>
+	<link rel="stylesheet" type="text/css" href="./custom.button.css">
+
+	<style type="text/css">
+		* {
+			padding: 0;
+			margin: 0;
+		}
+		.main {
+			width: 500px;
+			margin: 0 auto;
+			padding: 60px 20px;
+		}
+		.section {
+			border-radius: 10px;
+			border: 1px solid lightgrey;
+			margin-bottom: 30px;
+			overflow: hidden;
+		}
+		.section h1 {
+			padding: 12px;
+			font-size: 32px;
+			font-family: Arial, Verdana;
+			background-color: lightgrey;
+			color: white;
+		}
+		.section .content {
+			padding: 20px;
+		}
+		.content p {
+			line-height: 1.5em;
+			margin-bottom: 10px;
+		}
+		.content code+p {
+			margin-top: 20px;
+		}
+		code {
+			display: inline-block;
+			width: 450px;
+			background: rgba(193, 236, 255, 0.53);
+			padding: 5px;
+			border-radius: 5px;
+			color: #026f02;
+		}
+		.label {
+			padding: 3px;
+			font-size: 0.8em;
+			background-color: rgba(255, 224, 229, 0.73);
+			color: red;
+			border-radius: 4px;
+		}
+	</style>
+</head>
+<body>
+<div class="main">
+	<div class="section">
+		<h1>Effect</h1>
+		<div class="content">
+			<div class="co-checkbox co-box">
+				<input type="checkbox" id="myCheckbox">
+				<label for="myCheckbox"></label>
+			</div>
+			<div class="co-radiobox co-box">
+				<input type="radio" name="radio1" id="myRadiobox">
+				<label for="myRadiobox"></label>
+				<input type="radio" name="radio1" id="myRadiobox1">
+				<label for="myRadiobox1"></label>
+			</div>
+		</div>
+	</div>
+	<div class="section">
+		<h1>Using</h1>
+		<div class="content">
+			<p>引用样式文件到你的html文档中</p>
+			<code>&lt;link rel="stylesheet" type="text/css" href="custom.button.css"&gt;</code>
+			<p>在需要应用该样式的checkbox/radiobox下面添加<span class="label">label</span>，并利用for属性与<span class="label">input</span>相关联<span class="atention">注意：label标签一定要在input标签下面，并且紧邻input标签</span></p>
+			<code>&lt;input type="checkbox" id="myCheckbox"&gt;<br/>&lt;label for="myCheckbox"&gt;&lt;/label&gt;</code>
+			<p>创建一个<span class="label">div</span>，添加<span class="label">co-box co-checkbox</span>类名，并将<span class="label">input</span>和<span class="label">label</span>包裹在里面</p>
+			<code>
+				&lt;div class="co-checkbox co-box"&gt;<br/>
+				&nbsp;&nbsp;&lt;input type="checkbox" id="myCheckbox"&gt;<br/>
+				&nbsp;&nbsp;&lt;label for="myCheckbox"&gt;&lt;/label&gt;<br/>
+				&lt;/div&gt;
+			</div></code>
+		</div>
+	</div>
+</div>
+</body>
+</html>
